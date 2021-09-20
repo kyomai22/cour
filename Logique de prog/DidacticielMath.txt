@@ -1,0 +1,30 @@
+debut DidacticielMath
+	var symbole
+	var	Choix, a, b, c : N <- 0
+	
+	Afficher	"Didacticiel Math"
+			"Menu"
+			"1. +"
+			"2. -"
+			"3. *"
+			"4. /"
+			"5. Sortir"
+			
+	Afficher	"Saisir un choix"
+		Saisir Choix
+			Cas ou choix
+				1: symbole <- +
+				2: symbole <- -
+				3: symbole <- *
+				4: symbole <- /
+				5: Afficher "Sortie"
+				
+					Sinon Afficher "Mauvais choix"
+			Fin de Cas ou
+			
+	Si choix=1 ou choix=2 ou choix=3 ou choix=4
+	
+		Alors Afficher "Saisir deux Nombres"
+
+	
+			

@@ -1,0 +1,74 @@
+debut tvaCalcul
+
+var tva, calcTva, choix, montant, TTC, TMP: N <- 0
+
+Afficher 	"Menu."
+			"1. TVA : 6%"
+			"2. TVA : 12%"
+			"3. TVA : 21%"
+			"4. TVA : 0%"
+			"0. Sortir"
+			
+Afficher	"Entrer votre choix" 
+
+Saisir		choix
+
+Cas ou		choix
+
+	1 : 	Afficher "Entrer un montant"
+			Saisir montant
+			
+			calcTva <- 0.06
+			tva <- montant*calcTva
+			ttc <- (montant*calcTva)+montant
+			
+			Afficher 		"HTVA :"	montant
+							"TVA :" 	tva
+							"TTC :" 	ttc
+							
+			
+	2 : 	Afficher "Entrer un montant"
+			Saisir montant
+			
+			calcTva <- 0.12
+			tva <- montant*calcTva
+			ttc <- (montant*calcTva)+montant
+			
+			Afficher 		"HTVA :"	montant
+							"TVA :" 	tva
+							"TTC :" 	ttc
+							
+			
+	3 : 	Afficher "Entrer un montant"
+			Saisir montant
+			
+			calcTva <- 0.21
+			tva <- montant*calcTva
+			ttc <- (montant*calcTva)+montant
+			
+			Afficher 		"HTVA :"	montant
+							"TVA :" 	tva
+							"TTC :" 	ttc
+							
+
+	4 : 	Afficher "Entrer un montant"
+			Saisir montant
+			
+			ttc <- montant
+			
+			Afficher 		"HTVA :"	montant
+							"TVA :" 	tva
+							"TTC :" 	ttc
+							
+			
+	0 :		Afficher "Merci et bonne journée"
+			
+fin de Cas ou
+ 		
+	Si choix != 0 ou Si choix != 1 ou Si choix != 2 ou Si choix !=3 ou Si choix !=4
+		Alors
+			Afficher "Petit malin vas"
+
+	fin de si
+	
+	fin tvaCalcul

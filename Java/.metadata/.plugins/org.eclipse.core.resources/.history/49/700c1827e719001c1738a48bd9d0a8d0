@@ -1,0 +1,12 @@
+package decouverte; //dossier découverte
+
+public class MonPremierProgramme { // une classe = programme
+	// convention jave : nom d'une classe ainsi que les mots dans  ce nom
+	// doivent commencer par une majuscule
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

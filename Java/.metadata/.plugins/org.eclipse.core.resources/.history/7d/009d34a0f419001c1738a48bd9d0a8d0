@@ -1,0 +1,13 @@
+package decouverte;
+
+public class Saisies {
+
+	public static void main(String[] args) {
+		int nb1,nb2;
+		System.out.println("Bonjour, entrez une valeure eintère SVP");
+		//saisir nb1
+		nb1=(new Scanner(System.in)).nextInt();
+
+	}
+
+}
