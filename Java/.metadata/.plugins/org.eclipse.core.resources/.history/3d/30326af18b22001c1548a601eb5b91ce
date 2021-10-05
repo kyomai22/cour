@@ -1,0 +1,24 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Division {
+
+	public static void main(String[] args) {
+		// Écrire le programme qui effectue la division entière de deux nombres entiers sans utiliser 
+		//l’instruction l’opérateur de division / . 
+		
+		int nb1=0, nb2=0, cpt=0, div=0;
+		
+		System.out.println("__"+" divisé par "+"__");
+		nb1=(new Scanner(System.in)).nextInt();
+		nb2=(new Scanner(System.in)).nextInt();
+		
+		while(nb1>=div) {
+			div=nb2*2;
+			cpt++;
+		}
+		System.out.println("Le résultat est "+cpt);
+	}
+
+}

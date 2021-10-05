@@ -1,0 +1,23 @@
+package boucles;
+
+public class Parfait {
+
+	public static void main(String[] args) {
+		int nb1=0,nb2=0,nb3=0;
+		
+		System.out.println("Voici les nombres parfait avant 4000");
+		
+		for(nb1=1; nb1<nb2; nb1++) {
+			if(nb2%nb1==0){
+				nb3=nb3+nb1;
+			}
+			if (nb3 == nb2){
+				System.out.println(nb2+" est un nombre parfait");
+			}else {
+				System.out.println(nb2+" est pas un nombre parfait");
+			}
+		}
+
+	}
+
+}

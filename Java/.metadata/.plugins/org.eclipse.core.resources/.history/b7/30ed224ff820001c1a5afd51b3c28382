@@ -1,0 +1,24 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Chiffre {
+
+	public static void main(String[] args) {
+		int nb=0;
+		
+		System.out.println("Entrez un chiffre");
+		nb=(new Scanner(System.in)).nextInt();
+		
+
+		while (nb!=0&&nb!=1&&nb!=2&&nb!=3 ) {
+			if (nb==0 || nb==1 || nb==2 || nb==3) {
+				System.out.println("Au revoir");
+				break;
+			} else {
+				System.out.println("Entrez 0, 1, 2 ou 3 pour sortir");
+				nb=(new Scanner(System.in)).nextInt();
+			}
+		}
+	}
+}

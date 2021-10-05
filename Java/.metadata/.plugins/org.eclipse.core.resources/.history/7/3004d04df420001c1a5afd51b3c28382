@@ -1,0 +1,18 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Multiplications {
+
+	public static void main(String[] args) {
+		int nb=0, i;
+		
+		System.out.println("Entrez un nombre");
+		nb=(new Scanner(System.in)).nextInt();
+		
+		for (i =1; i <= 10; i++) 
+			System.out.println(nb + "test"+ i + "egal"+ (nb*i));
+
+	}
+
+}

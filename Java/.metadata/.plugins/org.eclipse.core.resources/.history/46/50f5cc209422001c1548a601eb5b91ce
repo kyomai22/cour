@@ -1,0 +1,26 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Choix {
+
+	public static void main(String[] args) {
+		int choix1=0, choix2=0;
+		
+		while ((choix1!=1)||(choix1!=2)||(choix1!=3)){
+		System.out.println("1er choix");
+		System.out.println("1.");
+		System.out.println("2.");
+		System.out.println("3.");
+		choix1=(new Scanner(System.in)).nextInt();
+		}
+		
+		System.out.println("1er choix");
+		System.out.println("1.");
+		System.out.println("2.");
+		System.out.println("3.");
+		choix2=(new Scanner(System.in)).nextInt();
+
+	}
+
+}

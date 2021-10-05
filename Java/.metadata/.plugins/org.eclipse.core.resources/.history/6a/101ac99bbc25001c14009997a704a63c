@@ -1,0 +1,15 @@
+package vecteur;
+
+public class VerifieNombre {
+
+	public static void main(String[] args) {
+		//Ecrire un programme qui crée un tableau de 10 éléments entiers et initialise ce tableau avec 10 
+		//nombres entiers entrés par l’utilisateur. 
+		//Demander à l’utilisateur « Entrez un nombre », si le nombre est présent dans le tableau, afficher 
+		//« vrai » ainsi que la position de ce nombre dans le tableau sinon afficher « faux », si c’est faux 
+		//demander un nouveau nombre .
+		int 
+
+	}
+
+}

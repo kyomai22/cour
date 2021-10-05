@@ -1,0 +1,22 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Parfait {
+
+	public static void main(String[] args) {
+		int a=0,b=0,c=0,d=2,e=0,cpt=0;
+		
+		System.out.println("Insérer un nombre"); //pour le test
+		b=(new Scanner(System.in)).nextInt();
+		cpt=b-1;
+		
+		while (cpt>0){
+			c=d*d;
+			e=c+c;
+			cpt--;
+		}
+		System.out.println(e);
+	}
+
+}

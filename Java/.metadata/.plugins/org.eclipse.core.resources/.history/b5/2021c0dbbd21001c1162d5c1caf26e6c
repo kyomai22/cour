@@ -1,0 +1,15 @@
+package TestJava;
+
+public class TableauLogique {
+
+	public static void main(String[] args) {
+		int[][]tab = new int[4][5];
+		int i=0, j=0;
+		
+		for (i<=3){
+			
+		}
+
+	}
+
+}

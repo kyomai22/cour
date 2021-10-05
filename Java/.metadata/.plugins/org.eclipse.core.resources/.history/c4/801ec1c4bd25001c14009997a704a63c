@@ -1,0 +1,43 @@
+package vecteur;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class VerifieNombre {
+
+	public static void main(String[] args) {
+		
+		//Ecrire un programme qui crée un tableau de 10 éléments entiers et initialise ce tableau avec 10 
+		//nombres entiers entrés par l’utilisateur. 
+		//Demander à l’utilisateur « Entrez un nombre », si le nombre est présent dans le tableau, afficher 
+		//« vrai » ainsi que la position de ce nombre dans le tableau sinon afficher « faux », si c’est faux 
+		//demander un nouveau nombre .
+		
+		int []tab=new int[10];
+		Random r=new Random();
+		int nb=0, cpt=0;
+			
+		for(cpt=0;cpt<10;cpt++){
+			nb=r.nextInt(30);
+			tab[cpt]=nb;
+			System.out.print(tab[cpt]);
+			System.out.print(" ");
+			
+		}
+		System.out.println("");
+		System.out.println("Entrez un nombre");
+		nb=(new Scanner(System.in)).nextInt();
+		
+		cpt=0;
+		while(cpt!=10){
+			if(tab[i]==nb){
+				System.out.println("Vrai");
+			} else {
+				System.out.println("Faux");
+				nb=(new Scanner(System.in)).nextInt();
+			}
+			cpt++;
+		}
+	}
+
+}

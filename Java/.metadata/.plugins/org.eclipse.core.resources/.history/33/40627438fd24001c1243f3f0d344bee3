@@ -1,0 +1,23 @@
+package vecteur;
+
+import java.util.Random;
+
+public class VecteurAléat {
+
+	public static void main(String[] args) {
+		int tab[]={0,0,0,0,0,0,0,0,0,0};
+		Random r=new Random();
+		int nb, cpt=0;
+		
+		nb=r.nextInt(30);
+		
+		for(cpt=0;cpt<10;cpt++){
+			System.out.println(cpt);
+			System.out.println(tab);
+		}
+		
+		
+
+	}
+
+}

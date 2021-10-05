@@ -1,0 +1,17 @@
+package boucles;
+
+public class Pairs {
+
+	public static void main(String[] args) {
+		int nb=20;
+		
+		System.out.println("Les 20 premiers nombre pair sont : ");
+		
+		for (int i=1; i <=nb; i++) {
+			if (i%2 == 0);
+			System.out.println(i);
+		}
+
+	}
+
+}

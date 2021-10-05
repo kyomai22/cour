@@ -1,0 +1,24 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class SapinDeux {
+
+	public static void main(String[] args) {
+		String[] sapin= {" ", "*"};
+		char esp= ' ';
+		char etl= '*';
+		int choix=0,reste=0,something=0;
+		
+		System.out.println("Entrez la taille de l'arbre");
+		choix=(new Scanner(System.in)).nextInt();
+		
+		reste=choix%2;
+		
+		while (choix>=0) {
+			System.out.println(""+sapin);
+			choix--;
+		}
+	}
+
+}

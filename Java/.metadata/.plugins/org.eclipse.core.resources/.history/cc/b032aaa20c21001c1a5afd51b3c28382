@@ -1,0 +1,26 @@
+package boucles;
+
+import java.util.Scanner;
+
+public class Sapin {
+
+	public static void main(String[] args) {
+		char esp= ' ';
+		char etl= '*';
+		int chx=0,rst=0,div=0;
+		
+		do{
+			System.out.println("Entrez la taille de votre sapin :");
+				chx=(new Scanner(System.in)).nextInt();
+			if ((nb<=0) || (nb%2==0))
+			System.out.println((chx%2));
+			System.out.println((chx/2));
+		}	while ((chx<=0) || (chx%2==0));
+		
+		
+		
+		
+
+	}
+
+}

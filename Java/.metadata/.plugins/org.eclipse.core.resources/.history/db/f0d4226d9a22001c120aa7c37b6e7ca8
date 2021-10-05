@@ -1,0 +1,26 @@
+package boucles;
+
+public class Punition {
+
+	public static void main(String[] args) {
+		int nb1=0,cpt=0,cpt2=0;
+		
+		
+			while(cpt2!=20){
+				cpt=0;
+				nb1=1;
+				System.out.println("");
+				while(cpt!=10){
+					nb1=nb1+cpt2;
+					nb1=nb1+nb1;
+					System.out.print(nb1+"	");
+					cpt++;
+				}
+				cpt2++;
+			}
+		
+		
+
+	}
+
+}

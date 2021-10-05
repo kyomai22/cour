@@ -1,0 +1,18 @@
+package boucles;
+
+public class Punition {
+
+	public static void main(String[] args) {
+		int nb1=0,cpt=0;
+		
+		while(cpt!=10){
+			nb1++;			
+			System.out.print(" "+nb1);
+			cpt++;
+		}
+		
+		
+
+	}
+
+}
