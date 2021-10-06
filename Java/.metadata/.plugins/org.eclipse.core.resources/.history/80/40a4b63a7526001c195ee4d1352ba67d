@@ -1,0 +1,47 @@
+package vecteur;
+
+import java.util.Scanner;
+
+public class Tri {
+
+	public static void main(String[] args) {
+		
+		//Ecrivez un programme qui crée un tableau de 10 éléments entiers et initialise ce tableau avec 10 
+		//nombres entiers entrés par l’utilisateur. Affichez les éléments du tableau. Triez le tableau et réaffichez-le.
+		
+		int []tab=new int[10];
+		int nb=0,cpt1=0,tmp=10;
+		boolean estpetit= false;
+		
+		System.out.println("Entrez 10 nombres");
+		
+		for (int i=0;i<10;i++){
+			//nb=(new Scanner(System.in)).nextInt();
+			tmp=tmp-1;
+			nb=tmp;
+			tab[i]=nb;	
+			
+		}
+		
+		for(int cpt=0;cpt!=10;cpt++){
+			System.out.print(tab[cpt]);
+			System.out.print(" ");
+		}
+		System.out.println("");
+		while(estpetit){
+			estpetit=false;
+		for (int cpt=0;cpt!=10 && !estpetit;cpt++){
+			if (tab[cpt]>tab[cpt+1]){
+				tmp=tab[cpt];
+				tab[cpt]=tab[cpt+1];
+				tab[cpt+1]=tmp;
+				estpetit=true;
+			}
+		}
+		for(int cpt=0;cpt!=10;cpt++){
+			System.out.print(tab[cpt]);
+			System.out.print(" ");
+		}
+	}
+	}
+}

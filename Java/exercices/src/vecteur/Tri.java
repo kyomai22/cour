@@ -10,28 +10,39 @@ public class Tri {
 		//nombres entiers entrés par l’utilisateur. Affichez les éléments du tableau. Triez le tableau et réaffichez-le.
 		
 		int []tab=new int[10];
-		int nb=0,cpt1=0,tmp=0;
+		int nb=0,cpt1=0,tmp=10;
+		boolean estpetit= true;
 		
 		System.out.println("Entrez 10 nombres");
 		
 		for (int i=0;i<10;i++){
 			nb=(new Scanner(System.in)).nextInt();
-			tab[i]=nb;			
+			//tmp=tmp-1;
+			//nb=tmp;
+			tab[i]=nb;	
+			
 		}
 		
-		for(int cpt=0;cpt<10;cpt++){
+		for(int cpt=0;cpt!=10;cpt++){
 			System.out.print(tab[cpt]);
 			System.out.print(" ");
 		}
-		while(cpt1<10){
-			if(tab[cpt1]<tmp){
-				cpt1++;
+		System.out.println("");
+		while(estpetit){
+			estpetit=false;
+		for (int cpt=0;cpt<9 && !estpetit;cpt++){
+			if (tab[cpt]>tab[cpt+1]){
+				tmp=tab[cpt];
+				tab[cpt]=tab[cpt+1];
+				tab[cpt+1]=tmp;
+				estpetit=true;
 			}
-			if (tab[cpt1]>tmp){
-				tmp=tab[cpt1];
-			}
-			System.out.print(tab[cpt1]+"\t");
+		}
+		
+	}
+		for(int i=0;i<10;i++){
+			System.out.print(tab[i]);
+			System.out.print(" ");
 		}
 	}
-
 }
