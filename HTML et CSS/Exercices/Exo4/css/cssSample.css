@@ -1,12 +1,37 @@
-p {
-	color: green;
-	background-color: red;
+body{
+    font-family: 'arial',sans-serif;
 }
-h1 {
-	color: green;
-	background-color: red;
+a{
+    text-decoration: none;
 }
-h2{
-	color: green;
-	background-color: red;
+a:link, a:visited{
+    color: royalblue;
+}
+a:hover{
+    color: lightblue;
+}
+
+.lien-page-avant:link, .lien-page-avant:visited, .lien-page-suivant:link, .lien-page-suivant:visited{
+    color: white;
+    background-color: royalblue;
+}
+.lien-page-avant:hover, .lien-page-suivant:hover{
+    background-color: lightblue;
+}
+.note{
+    color: lightgrey;
+    font-size: 12px;
+    font-style: italic;
+}
+.note::before{
+    content: "Note :";
+}
+ul {
+    list-style: square;
+}
+.lien-page-avant::before{
+    content: "<";
+}
+.lien-page-suivant::after{ 
+    content: ">";
 }
