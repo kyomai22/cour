@@ -1,0 +1,15 @@
+package pileface;
+
+public class PileOuFace {
+
+	public static void main(String[] args) {
+		int choix=0, pile=1, face=0;
+		
+		System.out.println("\t"+"1. Réinitialiser les statistiques ");
+		System.out.println("\t"+"2. Jouer");
+		System.out.println("\t"+"3. Afficher les statistiques");
+		System.out.println("\t"+"4. Quitter le programme");
+
+	}
+
+}

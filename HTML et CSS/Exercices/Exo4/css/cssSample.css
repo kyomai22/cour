@@ -1,6 +1,9 @@
 body{
     font-family: 'arial',sans-serif;
 }
+h1{
+    text-transform: uppercase;
+}
 a{
     text-decoration: none;
 }
@@ -11,7 +14,8 @@ a:hover{
     color: lightblue;
 }
 
-.lien-page-avant:link, .lien-page-avant:visited, .lien-page-suivant:link, .lien-page-suivant:visited{
+.lien-page-avant:link, .lien-page-avant:visited,
+.lien-page-suivant:link, .lien-page-suivant:visited{
     color: white;
     background-color: royalblue;
 }
@@ -24,7 +28,7 @@ a:hover{
     font-style: italic;
 }
 .note::before{
-    content: "Note :";
+    content: "Note : ";
 }
 ul {
     list-style: square;
@@ -32,6 +36,6 @@ ul {
 .lien-page-avant::before{
     content: "<";
 }
-.lien-page-suivant::after{ 
+.lien-page-suivant::after{
     content: ">";
 }

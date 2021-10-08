@@ -1,0 +1,15 @@
+package tab2D;
+
+public class SommeColonne {
+
+	public static void main(String[] args) {
+		
+//		Créez un tableau de 3 lignes et 4 colonnes. 
+//		Remplissez ce tableau avec des nombres aléatoires.
+//		Ensuite, affichez le contenu du tableau. 
+//		Ensuite calculer et afficher le total de chaque colonne
+		
+		int tab[][]=new int[3][4];
+	}
+
+}
