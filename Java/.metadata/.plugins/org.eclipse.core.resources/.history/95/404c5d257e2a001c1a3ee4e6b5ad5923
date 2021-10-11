@@ -1,0 +1,10 @@
+package poo;
+
+public class Hangar {
+
+	public static void main(String[] args) {
+		Wagon[] train=new Wagon[20];
+
+	}
+
+}

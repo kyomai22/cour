@@ -1,0 +1,12 @@
+body{
+	color: white;
+}
+h1{
+	font-family: 'Lobster', cursive;
+}
+.cadre1{
+	background-image: url('../img/img1.jpeg');
+}
+.cadre2{
+	background-image: url('../img/img2.jpeg');
+}

@@ -1,0 +1,7 @@
+package poo;
+
+public class WagonMarchandise extends Wagon {
+private boolean couvert=false;
+private boolean citerne=false;
+private int tare;
+}

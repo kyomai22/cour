@@ -1,0 +1,7 @@
+package poo;
+
+public class WagonPassager extends Wagon {
+	private boolean doubleEtage=true;
+	private in nbPlaces=98;
+
+}

@@ -1,0 +1,10 @@
+package poo;
+
+public class Garage {
+
+	public static void main(String[] args) {
+		Voiture pupuce=new Voiture();
+		pupuce.nbChevaux=10000;
+	}
+
+}

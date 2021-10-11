@@ -1,0 +1,14 @@
+package poo;
+
+public class Garage {
+
+	public static void main(String[] args) {
+		Voiture pupuce=new Voiture();
+		VoitureDecapotable titine=new VoitureDecapotable();
+		pupuce.nbChevaux=10000;
+		pupuce.affiche();
+		titine.affiche();
+		
+	}
+
+}

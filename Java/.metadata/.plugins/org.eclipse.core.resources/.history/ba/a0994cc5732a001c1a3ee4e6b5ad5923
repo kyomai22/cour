@@ -1,0 +1,14 @@
+package poo;
+
+public class VoitureDecapotable extends Voiture {
+	
+	public boolean CapoteOuverte=false;
+	private String couleur="gris";
+	public void ouvre(){
+		CapoteOuverte=true;
+	}
+	public void ferme(){
+		CapoteOuverte=false;
+	}
+	
+}
