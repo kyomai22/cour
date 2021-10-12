@@ -6,11 +6,7 @@ public class Voiture {
 	public Voiture(){
 		nb++;
 	}
-	public Voiture(int nbC){
-		nbChevaux=nbC;
-		nb++;
-	}
-
+	
 	public void setNbChevaux(int nb){
 		if(nb<=0){
 			nbChevaux=50;

@@ -3,14 +3,7 @@ package poo;
 public class Voiture {
 	private int nbChevaux=90;
 	private static int nb=0;
-	public Voiture(){
-		nb++;
-	}
-	public Voiture(int nbC){
-		nbChevaux=nbC;
-		nb++;
-	}
-
+	
 	public void setNbChevaux(int nb){
 		if(nb<=0){
 			nbChevaux=50;

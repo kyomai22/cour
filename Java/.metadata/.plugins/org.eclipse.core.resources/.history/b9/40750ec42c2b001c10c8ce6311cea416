@@ -2,14 +2,6 @@ package poo;
 
 public class Voiture {
 	private int nbChevaux=90;
-	private static int nb=0;
-	public Voiture(){
-		nb++;
-	}
-	public Voiture(int nbC){
-		nbChevaux=nbC;
-		nb++;
-	}
 
 	public void setNbChevaux(int nb){
 		if(nb<=0){
@@ -33,12 +25,6 @@ public class Voiture {
 	public void demarre() {
 		System.out.println("Je peux rouler très vite");
 		System.out.println("jusque "+nbChevaux*1.5+" km/h");
-	}
-	public static int getNb() {
-		return nb;
-	}
-	public static void setNb(int nb) {
-		Voiture.nb = nb;
 	}
 
 }

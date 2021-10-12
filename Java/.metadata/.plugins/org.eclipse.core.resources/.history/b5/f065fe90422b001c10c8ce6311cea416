@@ -10,7 +10,7 @@ public class Voiture {
 		nbChevaux=nbC;
 		nb++;
 	}
-
+	
 	public void setNbChevaux(int nb){
 		if(nb<=0){
 			nbChevaux=50;
