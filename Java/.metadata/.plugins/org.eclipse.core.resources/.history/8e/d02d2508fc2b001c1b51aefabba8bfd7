@@ -1,0 +1,31 @@
+package schtroumpfs;
+
+public class Village {
+
+	public static void main(String[] args) {
+		Schtroumpfs basique=new Schtroumpfs();
+		GrandSchtroumpfs grand=new GrandSchtroumpfs();
+		Schtroumpfette fille=new Schtroumpfette();
+		SchtroumpfPeureux peureux=new SchtroumpfPeureux();
+		
+		basique.getNom();
+		basique.dessine();
+		basique.parle();
+		
+		grand.getNom();
+		grand.dessine();
+		grand.chef();
+		grand.parle();
+		
+		fille.getNom();
+		fille.dessine();
+		fille.shopping();
+		fille.parle();
+		
+		
+
+		
+
+	}
+
+}

@@ -1,0 +1,20 @@
+body{
+	margin: 0px;
+}
+h1{
+	margin: auto;
+	padding: 150px;
+}
+header{
+	background-image: url(../img/header.jpg);
+	background-size: auto;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 30px;
+
+}
+.menu{
+	color: white;
+	background-color: midnightblue;
+}

@@ -1,0 +1,17 @@
+package schtroumpfs;
+
+public class Schtroumpfs {
+	
+	private static int nb=0;
+	private String nom="Schtroumpfs";
+	
+	public Schtroumpfs(){
+		nb++;
+	}
+	public void parle(){
+		System.out.println("Il parle normalement");
+	}
+	public void dessine(){
+		System.out.println("Un Schtroumpfs tout banal");
+	}
+}

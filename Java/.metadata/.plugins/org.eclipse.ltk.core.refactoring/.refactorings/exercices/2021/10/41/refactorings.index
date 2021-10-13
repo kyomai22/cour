@@ -9,3 +9,5 @@
 1633947434341	Encapsulate field 'doubleEtage'
 1633947443590	Encapsulate field 'nbPlaces'
 1634023321332	Encapsulate field 'nb'
+1634108591338	Delete element
+1634110065021	Encapsulate field 'nom'

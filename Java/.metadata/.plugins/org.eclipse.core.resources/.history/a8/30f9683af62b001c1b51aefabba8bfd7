@@ -1,0 +1,11 @@
+package schtroumpfs;
+
+public class Village {
+
+	public static void main(String[] args) {
+		Schtroumpfs basique;
+		GrandSchtroumpfs grand;
+
+	}
+
+}
