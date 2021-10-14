@@ -12,11 +12,11 @@ public class Schtroumpfs {
 		this.nom = nom;
 	}
 	public Schtroumpfs(){
-		nb++;
+		setNb(getNb() + 1);
 	}
 	public Schtroumpfs(String nom){
 		this.setNom(nom);
-		nb++;
+		setNb(getNb() + 1);
 	}
 	public void parle(){
 		System.out.println("Il parle normalement");
@@ -25,5 +25,11 @@ public class Schtroumpfs {
 	}
 	public void dessine(){
 		System.out.println("Un Schtroumpfs tout banal");
+	}
+	public static int getNb() {
+		return nb;
+	}
+	public static void setNb(int nb) {
+		Schtroumpfs.nb = nb;
 	}
 }

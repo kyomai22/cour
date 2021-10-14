@@ -1,0 +1,68 @@
+h1{
+	padding: 30px;
+	background-color: purple;
+	color: white;
+	text-align: center;
+}
+h2{
+	padding: 30px;
+	margin: auto;
+	max-width: 600px;
+	background-color: orange;
+	text-align: center;
+}
+.bloc1 div{
+	display: inline-block;
+	background-color: red;
+	text-align: justify;
+	padding: 2.5%;
+	margin: 0.5%;
+	width: 27.3333%;
+}
+.bloc2 div{
+	display: inline-block;
+	background-color: black;
+	color: white;
+	text-align: justify;
+	width: 48%;
+	margin: 0.5%;
+	padding: 0.5%;
+}
+@media screen and (max-width: 1000px){
+	.bloc1 .cache{
+		display: none;
+	}
+	.bloc1 div{
+		background-color: green;
+		width: 48%;
+		margin: 0.5%;
+		padding: 0.5%;
+	}
+	.bloc2 div{
+	display: block;
+	width: 100%;
+}
+}
+@media screen and (max-width: 800px){
+		.bloc1 .cache{
+		display: block;
+	}
+	h2{
+		margin-bottom: 10%;
+	}
+	.bloc1 div{
+		display: block;
+		background-color: blue;
+		text-align: justify;
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.bloc2 div{
+	display: block;
+	background-color: black;
+	color: white;
+	text-align: justify;
+	width: 100%;
+}
+}

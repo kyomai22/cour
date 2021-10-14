@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="poo.VoitureDecapotable"/>
 <fullyQualifiedTypeName name="poo.Voiture"/>
-<fullyQualifiedTypeName name="schtroumpfs.Schtroumpfs"/>
 <fullyQualifiedTypeName name="schtroumpfs.Schtroumpfette"/>
 <fullyQualifiedTypeName name="schtroumpfs.SchtroumpfPeureux"/>
 <fullyQualifiedTypeName name="schtroumpfs.SchtroumpfsNoir"/>
 <fullyQualifiedTypeName name="schtroumpfs.GrandSchtroumpfs"/>
+<fullyQualifiedTypeName name="schtroumpfs.Schtroumpfs"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
