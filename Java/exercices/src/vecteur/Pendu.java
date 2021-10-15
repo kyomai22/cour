@@ -1,53 +1,196 @@
 package vecteur;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Pendu {
-
+	public static final String ANSI_RESET = "\u001B[0m";
+	public static final String ANSI_BLACK = "\u001B[30m";
+	public static final String ANSI_RED = "\u001B[31m";
+	public static final String ANSI_GREEN = "\u001B[32m";
+	public static final String ANSI_YELLOW = "\u001B[33m";
+	public static final String ANSI_BLUE = "\u001B[34m";
+	public static final String ANSI_PURPLE = "\u001B[35m";
+	public static final String ANSI_CYAN = "\u001B[36m";
+	public static final String ANSI_WHITE = "\u001B[37m";
 	public static void main(String[] args) {
-		String []fruit={"pomme","orange","papaye","kiwi","poire","banane","mangue","cerise","prune","nectarine","peche"};
-		char[] tab;
+
+		String[] fruit = {"pomme", "orange", "papaye", "kiwi", "poire", "banane", "mangue", "cerise", "prune", "nectarine", "peche", "citron","FruitDuDragon","melon","duran","lichi"};
+		char[] tab, score;
 		char lettre;
-		String mot;
-		Random r=new Random();
-		int nb=0, i=0, vie=8, victoire=0;
-		boolean trouver=false;
+		String mot, under = "";
+		Random r = new Random();
+		int nb = 0, i = 0, vie = 6, victoire = 0, fin=0;
+		boolean trouver = false;
 
-		nb=r.nextInt(fruit.length);											//cette partie me permet de déterminer que nom de fruit vas etre pris dans le tableau, et ensuite 
-		System.out.println("Devinez un mot sur le theme des fruits : ");	//conaitre la longueur du mot pour pouvoir faire l'affichage initial dans la boucle en
-		mot=fruit[nb];														//dessous.
-		tab=mot.toCharArray();
-		System.out.println(tab);//a supprimer pour les test uniquement
-		for(i=0;i<tab.length;i++){
+		while(fin==0){
+		nb = r.nextInt(fruit.length);                                                                //cette partie me permet de déterminer que nom de fruit vas etre pris dans le tableau, et ensuite
+		System.out.println(ANSI_BLUE + "Devinez un mot sur le theme des fruits : " + ANSI_RESET);    //conaitre la longueur du mot pour pouvoir faire l'affichage initial dans la boucle en
+		mot = fruit[nb];                                                                            //dessous.
+		tab = mot.toCharArray();
+		score = new char[tab.length];
+		//System.out.println((ANSI_YELLOW)+ Arrays.toString(tab) +(ANSI_RESET));//a supprimer pour les test uniquement
+		for (i = 0; i < tab.length; i++) {
+			score[i] = '_';
 		}
-		System.out.print(".");
+		for (int b = 0; b < tab.length; b++) {
+			System.out.print(score[b] + " ");
+		}
 		System.out.println("");
-		victoire=i;
+		victoire = i;
 		System.out.println(victoire);
-		while(vie!=0 && victoire!=0){
-			lettre=(new Scanner(System.in)).nextLine().charAt(0);
+		while (vie != 0 && victoire != 0) {
+			lettre = (new Scanner(System.in)).nextLine().charAt(0);
 
-			for(int y=0;y<tab.length;y++){
-				trouver=false;
-				if(lettre==tab[y]){
+			for (int y = 0; y < tab.length; y++) {
+
+				if (lettre == tab[y]) {
+					score[y] = lettre;
 					victoire--;
-					trouver=true;
-					System.out.println("yep");		
+					trouver = true;
 				}
 			}
-			if (trouver==false){
+			for (int b = 0; b < tab.length; b++) {
+				System.out.print(ANSI_PURPLE + score[b] + " ");
+
+			}
+			System.out.println("");
+
+			if (trouver == false) {
+				if (vie == 6) {
+					System.out.println(ANSI_YELLOW + "__________________");
+					System.out.println("|          |");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+				}
+
+
+				if (vie == 5) {
+					System.out.println(ANSI_YELLOW + "__________________        ");
+					System.out.println("|          |              ");
+					System.out.println("|        " + ANSI_CYAN + "______        " + ANSI_RESET);
+					System.out.println(ANSI_YELLOW + "|       " + ANSI_CYAN + "|      |          " + ANSI_RESET);
+					System.out.println(ANSI_YELLOW + "|       " + ANSI_CYAN + "|______|          " + ANSI_RESET);
+					System.out.println(ANSI_YELLOW + "|");
+					System.out.println("|");
+					System.out.println("|");
+					System.out.println("|");
+
+
+				}
+				if (vie == 4) {
+					System.out.println(ANSI_YELLOW + "__________________       ");
+					System.out.println("|          |             ");
+					System.out.println("|        " + ANSI_CYAN + "______" + ANSI_YELLOW + "          ");
+					System.out.println("|       " + ANSI_CYAN + "|      |" + ANSI_YELLOW + "         ");
+					System.out.println("|       " + ANSI_CYAN + "|______|" + ANSI_YELLOW + "         ");
+					System.out.println("|           " + ANSI_CYAN + "|" + ANSI_YELLOW + "            ");
+					System.out.println("|           " + ANSI_CYAN + "|_______" + ANSI_YELLOW + "     ");
+					System.out.println("|");
+					System.out.println("|");
+
+				}
+				if (vie == 3) {
+					System.out.println(ANSI_YELLOW + "__________________       ");
+					System.out.println("|          " + ANSI_CYAN + "|" + ANSI_YELLOW + "             ");
+					System.out.println("|        " + ANSI_CYAN + "______" + ANSI_YELLOW + "          ");
+					System.out.println("|       " + ANSI_CYAN + "|      |" + ANSI_YELLOW + "         ");
+					System.out.println("|       " + ANSI_CYAN + "|______|" + ANSI_YELLOW + "         ");
+					System.out.println("|           " + ANSI_CYAN + "|" + ANSI_YELLOW + "            ");
+					System.out.println("|  " + ANSI_CYAN + "________ | _______" + ANSI_YELLOW + " ");
+					System.out.println("|");
+					System.out.println("|");
+				}
+				if (vie == 2) {
+					System.out.println(ANSI_YELLOW + "__________________       ");
+					System.out.println("|          " + ANSI_CYAN + "|" + ANSI_YELLOW + "             ");
+					System.out.println("|        " + ANSI_CYAN + "______" + ANSI_YELLOW + "          ");
+					System.out.println("|       " + ANSI_CYAN + "|      |" + ANSI_YELLOW + "         ");
+					System.out.println("|       " + ANSI_CYAN + "|______|" + ANSI_YELLOW + "         ");
+					System.out.println("|           " + ANSI_CYAN + "|" + ANSI_YELLOW + "            ");
+					System.out.println("|   " + ANSI_CYAN + "_______ | _______" + ANSI_YELLOW + "    ");
+					System.out.println("|          " + ANSI_CYAN + "_|_" + ANSI_YELLOW + "           ");
+					System.out.println("|         " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+					System.out.println("|         " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+					System.out.println("|         " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+					System.out.println("|         " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+					System.out.println("|         " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+
+				}
+				if (vie == 1) {
+					System.out.println(ANSI_YELLOW + "__________________");
+					System.out.println("|          |             ");
+					System.out.println("|        " + ANSI_CYAN + "______" + ANSI_YELLOW + "            ");
+					System.out.println("|       " + ANSI_CYAN + "|      |" + ANSI_YELLOW + "           ");
+					System.out.println("|       " + ANSI_CYAN + "|______|" + ANSI_YELLOW + "           ");
+					System.out.println("|           " + ANSI_CYAN + "|" + ANSI_YELLOW + "              ");
+					System.out.println("|    " + ANSI_CYAN + "______ | ______" + ANSI_YELLOW + "       ");
+					System.out.println("|          " + ANSI_CYAN + "_|_" + ANSI_YELLOW + "             ");
+					System.out.println("|         " + ANSI_CYAN + "|   |" + ANSI_YELLOW + "           ");
+					System.out.println("|         " + ANSI_CYAN + "|   |" + ANSI_YELLOW + "            ");
+					System.out.println("|         " + ANSI_CYAN + "|   |" + ANSI_YELLOW + "           ");
+					System.out.println("|         " + ANSI_CYAN + "|   |" + ANSI_YELLOW + "         ");
+					System.out.println("|         " + ANSI_CYAN + "|   |" + ANSI_YELLOW + "        ");
+				}
+				for (int b = 0; b < tab.length; b++) {
+					System.out.print(ANSI_PURPLE + score[b] + " ");
+				}
+				System.out.println("");
 				vie--;
-				System.out.println("AHAH");
+
 			}
-			if(victoire==0){
-				System.out.println("V I C T O R Y !");
+			trouver = false;
+			if (victoire == 0) {
+				System.out.println(ANSI_GREEN + "\n" +
+						"\n" +
+						" _   _ _      _                     _ \n" +
+						"| | | (_)    | |                   | |\n" +
+						"| | | |_  ___| |_ ___  _ __ _   _  | |\n" +
+						"| | | | |/ __| __/ _ \\| '__| | | | | |\n" +
+						"\\ \\_/ / | (__| || (_) | |  | |_| | |_|\n" +
+						" \\___/|_|\\___|\\__\\___/|_|   \\__, | (_)\n" +
+						"                             __/ |    \n" +
+						"                            |___/     \n" +
+						"\n" + ANSI_RESET);
 			}
-			if(vie==0){
-				System.out.println("G A M E  O V E R");
+			if (vie == 0) {
+				System.out.println(ANSI_RED + "\n" +
+						"\n" +
+						" _____   ___  ___  ___ _____   _____  _   _ ___________ \n" +
+						"|  __ \\ / _ \\ |  \\/  ||  ___| |  _  || | | |  ___| ___ \\\n" +
+						"| |  \\// /_\\ \\| .  . || |__   | | | || | | | |__ | |_/ /\n" +
+						"| | __ |  _  || |\\/| ||  __|  | | | || | | |  __||    / \n" +
+						"| |_\\ \\| | | || |  | || |___  \\ \\_/ /\\ \\_/ / |___| |\\ \\ \n" +
+						" \\____/\\_| |_/\\_|  |_/\\____/   \\___/  \\___/\\____/\\_| \\_|\n" +
+						"                                                        \n" +
+						"                                                        \n" +
+						"\n" + ANSI_RESET);
 			}
 		}
-
+		System.out.println(ANSI_RED+	" ____________________ ");
+		System.out.println(ANSI_RED+	"|"+ANSI_PURPLE+"Voulez vous rejouer?"+ANSI_RED+"|");
+		System.out.println(ANSI_RED+	"|____________________|");
+		System.out.println(ANSI_CYAN+	"Oui : 0			  ");
+		System.out.println(				"Non : 1			  ");
+		System.out.println(ANSI_RED+	"______________________");
+			fin=(new Scanner(System.in)).nextInt();
+	}
+		System.out.println(ANSI_CYAN+"\n" +
+				"\n" +
+				"    _       _   _        ____    U _____ u__     __    U  ___ u           ____          _    \n" +
+				"U  /\"\\  uU |\"|u| |    U |  _\"\\ u \\| ___\"|/\\ \\   /\"/u    \\/\"_ \\/  ___   U |  _\"\\ u     U|\"|u  \n" +
+				" \\/ _ \\/  \\| |\\| |     \\| |_) |/  |  _|\"   \\ \\ / //     | | | | |_\"_|   \\| |_) |/     \\| |/  \n" +
+				" / ___ \\   | |_| |      |  _ <    | |___   /\\ V /_,-.-,_| |_| |  | |     |  _ <        |_|   \n" +
+				"/_/   \\_\\ <<\\___/       |_| \\_\\   |_____| U  \\_/-(_/ \\_)-\\___/ U/| |\\u   |_| \\_\\       (_)   \n" +
+				" \\\\    >>(__) )(        //   \\\\_  <<   >>   //            \\\\.-,_|___|_,-.//   \\\\_      |||_  \n" +
+				"(__)  (__)   (__)      (__)  (__)(__) (__) (__)          (__)\\_)-' '-(_/(__)  (__)    (__)_) \n" +
+				"\n");
 	}
 
 }
