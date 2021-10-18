@@ -7,3 +7,11 @@ CREATE TABLE formations (
     for_annee YEAR(4) NOT NULL CHECK (for_annee > 2000),
     UNIQUE (for_nom , for_annee)
 );
+SELECT 
+    *
+FROM
+    formations;
+insert into formations (for_code, for_nom, for_annee) 
+values (default,'intro prog',2021);
+insert into formations (for_nom, for_annee) 
+values ('intro prog',2020);
