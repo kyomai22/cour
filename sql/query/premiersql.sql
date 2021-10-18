@@ -15,3 +15,10 @@ insert into formations (for_code, for_nom, for_annee)
 values (default,'intro prog',2021);
 insert into formations (for_nom, for_annee) 
 values ('intro prog',2020);
+insert into formations (for_nom, for_annee) 
+values ('intro prog',2022);
+insert into formations (for_nom, for_annee) 
+values ('java',2021);
+insert into formations (for_nom, for_annee) 
+values ('java',2022);
+update formations set for_nom='Web dev' where for_code = 4;
