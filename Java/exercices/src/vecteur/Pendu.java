@@ -5,15 +5,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Pendu {
-	public static final String ANSI_RESET = "\u001B[0m";
-	public static final String ANSI_BLACK = "\u001B[30m";
-	public static final String ANSI_RED = "\u001B[31m";
-	public static final String ANSI_GREEN = "\u001B[32m";
-	public static final String ANSI_YELLOW = "\u001B[33m";
+	public static final String ANSI_RESET = "\u001B[0m";	// ceci sert a avoir des "balises" de couleur pour l'affichage dans la console
+	public static final String ANSI_RED = "\u001B[31m";		// on les places dans le print comme ca (ANSI_RED+"Mon joli texte"+ANSI_RESET)
+	public static final String ANSI_GREEN = "\u001B[32m";	// RESET sert a revenir a la valeur par défaut de l'affichage, si on ne le met pas
+	public static final String ANSI_YELLOW = "\u001B[33m";	// La boucle en court sera entierement dans la couleur de la derniere balise mais pas la suivante
 	public static final String ANSI_BLUE = "\u001B[34m";
 	public static final String ANSI_PURPLE = "\u001B[35m";
 	public static final String ANSI_CYAN = "\u001B[36m";
-	public static final String ANSI_WHITE = "\u001B[37m";
 	public static void main(String[] args) {
 
 		String[] fruit = {"pomme", "orange", "papaye", "kiwi", "poire", "banane", "mangue", "cerise", "prune", "nectarine", "peche", "citron","FruitDuDragon","melon","duran","lichi"};
@@ -25,12 +23,12 @@ public class Pendu {
 		boolean trouver = false;
 
 		while(fin==0){
-		nb = r.nextInt(fruit.length);                                                                //cette partie me permet de déterminer que nom de fruit vas etre pris dans le tableau, et ensuite
+		nb = r.nextInt(fruit.length);                                                                //cette partie me permet de déterminer quel nom de fruit vas etre pris dans le tableau, et ensuite
 		System.out.println(ANSI_BLUE + "Devinez un mot sur le theme des fruits : " + ANSI_RESET);    //conaitre la longueur du mot pour pouvoir faire l'affichage initial dans la boucle en
 		mot = fruit[nb];                                                                            //dessous.
 		tab = mot.toCharArray();
 		score = new char[tab.length];
-		//System.out.println((ANSI_YELLOW)+ Arrays.toString(tab) +(ANSI_RESET));//a supprimer pour les test uniquement
+		//System.out.println((ANSI_YELLOW)+ Arrays.toString(tab) +(ANSI_RESET)); a supprimer pour les test uniquement
 		for (i = 0; i < tab.length; i++) {
 			score[i] = '_';
 		}
@@ -45,8 +43,8 @@ public class Pendu {
 
 			for (int y = 0; y < tab.length; y++) {
 
-				if (lettre == tab[y]) {
-					score[y] = lettre;
+				if (lettre == tab[y]) {			//cette partie sert a vérifier si lettre est contenue dans le tableau tab, si c'est le cas alors il va positionner la lettre entrée dans le tableau
+					score[y] = lettre;			//score, retire -1 a la variable score (la victoire est donnée quand le compteur arrive a 0) et fait passer trouver a TRUE
 					victoire--;
 					trouver = true;
 				}
@@ -57,8 +55,8 @@ public class Pendu {
 			}
 			System.out.println("");
 
-			if (trouver == false) {
-				if (vie == 6) {
+			if (!trouver) {						//ici si une bonne lettre n'a pas été trouvée la variable trouver reste false et donc enleve -1 a vie (il y'en a 6 de base) la partie
+				if (vie == 6) {					// s'arrete si on arrive a 0 vie, et par niveau de vie restante on a un affichage du pendu différente
 					System.out.println(ANSI_YELLOW + "__________________");
 					System.out.println("|          |");
 					System.out.println("|");
@@ -147,7 +145,7 @@ public class Pendu {
 			}
 			trouver = false;
 			if (victoire == 0) {
-				System.out.println(ANSI_GREEN + "\n" +
+				System.out.println(ANSI_GREEN + "\n" +			// ceci est l'affichage de la victoire et la défaite
 						"\n" +
 						" _   _ _      _                     _ \n" +
 						"| | | (_)    | |                   | |\n" +
@@ -173,15 +171,19 @@ public class Pendu {
 						"\n" + ANSI_RESET);
 			}
 		}
-		System.out.println(ANSI_RED+	" ____________________ ");
+		System.out.println(ANSI_RED+	" ____________________ ");	//ici on a le menu pour quitter ou rejouer
 		System.out.println(ANSI_RED+	"|"+ANSI_PURPLE+"Voulez vous rejouer?"+ANSI_RED+"|");
 		System.out.println(ANSI_RED+	"|____________________|");
 		System.out.println(ANSI_CYAN+	"Oui : 0			  ");
 		System.out.println(				"Non : 1			  ");
 		System.out.println(ANSI_RED+	"______________________");
 			fin=(new Scanner(System.in)).nextInt();
+			if (fin==0){
+				vie=6;
+				victoire=i;
+			}
 	}
-		System.out.println(ANSI_CYAN+"\n" +
+		System.out.println(ANSI_CYAN+"\n" +	//ceci est le message de fin avant la fermeture du programme
 				"\n" +
 				"    _       _   _        ____    U _____ u__     __    U  ___ u           ____          _    \n" +
 				"U  /\"\\  uU |\"|u| |    U |  _\"\\ u \\| ___\"|/\\ \\   /\"/u    \\/\"_ \\/  ___   U |  _\"\\ u     U|\"|u  \n" +

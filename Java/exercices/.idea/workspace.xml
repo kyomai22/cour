@@ -103,6 +103,9 @@
     <SUITE FILE_PATH="coverage/exercices$Village.ic" NAME="Village Coverage Results" MODIFIED="1634281957601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>schtroumpfs.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/exercices$Pendu.ic" NAME="Pendu Coverage Results" MODIFIED="1634539921601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>vecteur.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/exercices$Vrai.ic" NAME="Vrai Coverage Results" MODIFIED="1632997264881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>exoboucles.*</FILTER>
     </SUITE>
