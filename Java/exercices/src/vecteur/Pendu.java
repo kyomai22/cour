@@ -44,9 +44,12 @@ public class Pendu {
 			for (int y = 0; y < tab.length; y++) {
 
 				if (lettre == tab[y]) {			//cette partie sert a vérifier si lettre est contenue dans le tableau tab, si c'est le cas alors il va positionner la lettre entrée dans le tableau
-					score[y] = lettre;			//score, retire -1 a la variable score (la victoire est donnée quand le compteur arrive a 0) et fait passer trouver a TRUE
-					victoire--;
 					trouver = true;
+					if(lettre !=score[y]) {
+						score[y] = lettre;            //score, retire -1 a la variable score (la victoire est donnée quand le compteur arrive a 0) et fait passer trouver a TRUE
+						victoire--;
+					}
+
 				}
 			}
 			for (int b = 0; b < tab.length; b++) {
