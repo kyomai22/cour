@@ -28,5 +28,8 @@ INSERT INTO articles VALUES('A13','marqueur','VERT',90,10,35,'F0002');
 INSERT INTO articles VALUES('A14','marqueur','BLEU',80,10,35,'F0002');
 INSERT INTO articles VALUES('A15','crayon','NOIR',45,10,35,'F0002');
 
-select * from articles;
+SELECT 
+    *
+FROM
+    articles;
 select * from fournisseurs;
