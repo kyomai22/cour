@@ -5,4 +5,4 @@ FROM
 WHERE
     art_coul IS NULL
         OR art_coul = 'ROUGE' AND art_pa < 75
-ORDER BY art_num asc;
+ORDER BY art_num ASC;

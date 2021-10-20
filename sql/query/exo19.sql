@@ -1,0 +1,1 @@
+select articles.art_num from articles
