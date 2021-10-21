@@ -1,8 +1,0 @@
-package schtroumpfs;
-
-public class SchtroumpfPeureux {
-	
-	public void peur(){
-		System.out.println("Il est pas vraiment du genre courageux");
-	}
-}

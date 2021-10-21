@@ -1,5 +1,0 @@
-package poo;
-
-public class WagonMarchandise extends Wagon {
-
-}

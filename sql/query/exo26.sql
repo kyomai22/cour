@@ -1,0 +1,1 @@
+select art_nom,four_nom from fournisseurs join localite on four_cp=loc_cp join articles on four_num=art_four where(art_coul in('rouge','vert','noir')and loc_repres=1);

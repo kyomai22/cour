@@ -1,9 +1,0 @@
-package schtroumpfs;
-
-public class GrandSchtroumpfs extends Schtroumpfs {
-	
-	public void chef(){
-		System.out.println("Lui c'est le chef");
-	}
-	
-}

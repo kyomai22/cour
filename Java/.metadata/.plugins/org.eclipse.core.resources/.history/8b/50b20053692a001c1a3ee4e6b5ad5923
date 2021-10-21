@@ -1,9 +1,0 @@
-package poo;
-
-public class Voiture {
-	public int nbChevaux;
-	public void affiche(){
-		System.out.println("Ma jolie voiture : ");
-	}
-	
-}
